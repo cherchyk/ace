@@ -1,0 +1,171 @@
+[[
+   "amp-start",
+  ["support.amp_tag","<?amp"]
+],[
+   "amp-start"
+],[
+   "amp-start",
+  ["keyword","function"],
+  ["text"," "],
+  ["identifier","nfact"],
+  ["paren.lparen","("],
+  ["variable","$n"],
+  ["paren.rparen",")"],
+  ["text"," "],
+  ["paren.lparen","{"]
+],[
+   "amp-start",
+  ["text","    "],
+  ["keyword","if"],
+  ["text"," "],
+  ["paren.lparen","("],
+  ["variable","$n"],
+  ["text"," "],
+  ["keyword.operator","=="],
+  ["text"," "],
+  ["constant.numeric","0"],
+  ["paren.rparen",")"],
+  ["text"," "],
+  ["paren.lparen","{"]
+],[
+   "amp-start",
+  ["text","        "],
+  ["support.function","return"],
+  ["text"," "],
+  ["constant.numeric","1"],
+  ["text",";"]
+],[
+   "amp-start",
+  ["text","    "],
+  ["paren.rparen","}"]
+],[
+   "amp-start",
+  ["text","    "],
+  ["keyword","else"],
+  ["text"," "],
+  ["paren.lparen","{"]
+],[
+   "amp-start",
+  ["text","        "],
+  ["support.function","return"],
+  ["text"," "],
+  ["variable","$n"],
+  ["text"," "],
+  ["keyword.operator","*"],
+  ["text"," "],
+  ["identifier","nfact"],
+  ["paren.lparen","("],
+  ["variable","$n"],
+  ["text"," "],
+  ["keyword.operator","-"],
+  ["text"," "],
+  ["constant.numeric","1"],
+  ["paren.rparen",")"],
+  ["text",";"]
+],[
+   "amp-start",
+  ["text","    "],
+  ["paren.rparen","}"]
+],[
+   "amp-start",
+  ["paren.rparen","}"]
+],[
+   "amp-start"
+],[
+   "amp-start",
+  ["support.function","echo"],
+  ["text"," "],
+  ["string","\""],
+  ["constant.language.escape","\\n\\n"],
+  ["string","Please enter a whole number ... \""],
+  ["text",";"]
+],[
+   "amp-start",
+  ["variable","$num"],
+  ["text"," "],
+  ["keyword.operator","="],
+  ["text"," "],
+  ["support.function","trim"],
+  ["paren.lparen","("],
+  ["support.function","fgets"],
+  ["paren.lparen","("],
+  ["constant.language","STDIN"],
+  ["paren.rparen","))"],
+  ["text",";"]
+],[
+   "amp-start"
+],[
+   "amp-start",
+  ["comment","// ===== PROCESS - Determing the factorial of the input number ====="]
+],[
+   "amp-start",
+  ["variable","$output"],
+  ["text"," "],
+  ["keyword.operator","="],
+  ["text"," "],
+  ["string","\""],
+  ["constant.language.escape","\\n\\n"],
+  ["string","Factorial \""],
+  ["text"," . "],
+  ["variable","$num"],
+  ["text"," . "],
+  ["string","\" = \""],
+  ["text"," . "],
+  ["identifier","nfact"],
+  ["paren.lparen","("],
+  ["variable","$num"],
+  ["paren.rparen",")"],
+  ["text"," . "],
+  ["string","\""],
+  ["constant.language.escape","\\n\\n"],
+  ["string","\""],
+  ["text",";"]
+],[
+   "amp-start",
+  ["support.function","echo"],
+  ["text"," "],
+  ["variable","$output"],
+  ["text",";"]
+],[
+   "amp-start"
+],[
+   ["amp-start","js-start"],
+  ["support.amp_tag","?>"],
+  ["text.xml"," "],
+  ["meta.tag.punctuation.tag-open.xml","<"],
+  ["meta.tag.script.tag-name.xml","script"],
+  ["meta.tag.punctuation.tag-close.xml",">"],
+  ["text","  "],
+  ["support.amp_tag","<?amp"]
+],[
+   ["#tmp","amp-qstring","amp-start","js-start"],
+  ["support.function","echo"],
+  ["text"," "],
+  ["string","'"]
+],[
+   ["amp-start","js-start"],
+  ["string","'"],
+  ["text",";"]
+],[
+   "js-start",
+  ["support.amp_tag","?>"]
+],[
+   "js-comment1",
+  ["comment","/*this is js "],
+  ["support.amp_tag","<?amp"],
+  ["text"," "],
+  ["support.function","echo"],
+  ["text"," "],
+  ["string","':)'"],
+  ["text","; "],
+  ["support.amp_tag","?>"]
+],[
+   "start",
+  ["meta.tag.punctuation.end-tag-open.xml","</"],
+  ["meta.tag.script.tag-name.xml","script"],
+  ["meta.tag.punctuation.tag-close.xml",">"],
+  ["text.xml"," not "],
+  ["constant.language.escape.reference.xml","&js;"]
+],[
+   "start"
+]]
