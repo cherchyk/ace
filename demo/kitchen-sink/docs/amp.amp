@@ -17,3 +17,83 @@ $output = "\n\nFactorial " . $num . " = " . nfact($num) . "\n\n";
 echo $output;
 
 ?>
+
+%%[
+VAR @Send_Classification, @CpcCode
+SET @Send_Classification = 'Commercial'
+SET @CpcCode = 1023
+
+set @facebook = lookup("ent.SOCIAL_LINKS","url","type", "Facebook_EN")
+set @twitter = lookup("ent.SOCIAL_LINKS","url","type", "Twitter_EN")
+set @youtube = lookup("ent.SOCIAL_LINKS","url","type", "Youtube_EN")
+]%%
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<custom name="opencounter" type="tracking" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<title>RBC Royal Bank</title>
+		<style type="text/css">
+			body {
+			-webkit-text-size-adjust: none;
+			-ms-text-size-adjust: none;
+			}
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+			text-decoration: default;
+			}
+
+			/****** MEDIA QUERIES ********/
+			@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+			word-wrap: break-word;
+			}
+			*[class~=stackonmobile] {
+			alignment-adjust: central !important;
+			}
+			line-height: 1.8 !important;
+			alignment-adjust: central !important;
+			}
+			}
+		</style>
+		<!-- Targeting Windows Mobile -->
+		<!--[if IEMobile 7]>
+	<style type="text/css">
+	</style>
+	<![endif]-->
+		<!--[if gte mso 9]>
+	<style>
+	/* Target Outlook 2007 and 2010 */
+	</style>
+	<![endif]-->
+	</head>
+	<body style="width:100% !important; min-height:1000px; color:#000000; font-family:Arial, sans-serif; font-size:14px; line-height:1.6;" alink="#25408f" link="#25408f" bgcolor="#eaeaea" text="#000000" yahoo="fix">
+
+		<table cellpadding="0" cellspacing="0" border="0" style="border-spacing:0;mso-table-rspace:0pt;mso-table-lspace:0pt;border-collapse:collapse;margin-top:5px;margin-bottom:5px;">
+			<tr>
+				<td style="padding-right:5px">
+					<a href="%%= RedirectTo(v(@facebook))=%%" target="_blank" alias="PREHEADER_FACEBOOK">
+						<img src="http://image.website.rbc.com/lib/fe921570736c0c7b75/m/1/facebook.gif" alt="Facebook" width="20" height="20" border="0" style="display:inline" />
+					</a>
+				</td>
+				<td style="padding-right:5px">
+					<a href="%%= RedirectTo(v(@twitter))=%%" target="_blank" alias="PREHEADER_TWITTER">
+						<img src="http://image.website.rbc.com/lib/fe921570736c0c7b75/m/1/twitter.gif" alt="Twitter" width="20" height="20" border="0" style="display:inline" />
+					</a>
+				</td>
+				<td>
+					<a href="%%= RedirectTo(v(@youtube))=%%" target="_blank" alias="PREHEADER_YOUTUBE">
+						<img src="http://image.website.rbc.com/lib/fe921570736c0c7b75/m/1/youtube.gif" alt="YouTube" width="20" height="20" border="0" style="display:inline" />
+					</a>
+				</td>
+				<td>
+					<font style="font-family:Arial, sans-serif; font-size:10px; color:#969696; mso-line-height-rule:exactly; line-height:16px;">
+						RBC Royal Bank | %%Member_Busname%%<br />
+						%%Member_Addr%%, %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%% | <a href="http://www.rbcroyalbank.com" style="color:#25408f; text-decoration:none" title="www.rbcroyalbank.com" target="_blank" alias="FOOTER_www.rbcroyalbank.com">www.rbcroyalbank.com</a>
+					</font>
+				</td>
+			</tr>
+		</table>
+		<img src="https://pixel.inbox.exacttarget.com/pixel.gif?r=%%=lookup(" ent.CFG_ReturnPath=""","RP_Pixel_ID=""","MID=""",=ent.CFG_ReturnPath","RP_Pixel_ID","MID", memberid)=%%"" width="1" height="1" />
+		<!-- /MAIN -->
+	</body>
+</html>
