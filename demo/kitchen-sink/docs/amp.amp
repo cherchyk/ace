@@ -8,7 +8,6 @@ function nfact($n) {
         return $n * nfact($n - 1);
     }
 }
-
 echo "\n\nPlease enter a whole number ... ";
 $num = trim(fgets(STDIN));
 
@@ -18,6 +17,14 @@ echo $output;
 
 ?>
 
+%%[FOR @Variable = <start expression> TO|DOWNTO <end expression> DO ]%%
+        [wrapped script or email content]
+    %%[NEXT @Variable]%%
+
+
+%%=LOWERCASE(Name)=%%
+%%=UPSERTDE("ent.CustomObject4",2,"Region","None","Product",_SubscriberKey,"Available",0,
+"Price",100.77,"Inventory",0,"ExpireDate",NOW(),"Url",CONCAT(SubscriberID," Upsert"))=%%
 %%[
 VAR @Send_Classification, @CpcCode
 SET @Send_Classification = 'Commercial'
@@ -27,6 +34,28 @@ set @facebook = lookup("ent.SOCIAL_LINKS","url","type", "Facebook_EN")
 set @twitter = lookup("ent.SOCIAL_LINKS","url","type", "Twitter_EN")
 set @youtube = lookup("ent.SOCIAL_LINKS","url","type", "Youtube_EN")
 ]%%
+
+<script runat=server language="ampscript" executioncontexttype="Post" executioncontextname=test>
+	VAR @Send_Classification, @CpcCode
+	SET @Send_Classification = 'Commercial'
+	SET @CpcCode = 1023
+
+	set @facebook = lookup("ent.SOCIAL_LINKS","url","type", "Facebook_EN")
+	set @twitter = lookup("ent.SOCIAL_LINKS","url","type", "Twitter_EN")
+	set @youtube = lookup("ent.SOCIAL_LINKS","url","type", "Youtube_EN")
+</script>
+
+%%[IF expression1 <comparison operator> expression2 THEN]%%
+    [wrapped script or email content]
+%%[ELSEIF expression1 <comparison operator> expression3 THEN]%%
+    [wrapped script or email content]
+%%[ELSE]%%
+    [wrapped script or email content]
+%%[ENDIF]%%
+
+%%[ /* Insert Comment Here */ ]%%
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
