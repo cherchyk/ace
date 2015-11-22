@@ -17,10 +17,17 @@ echo $output;
 
 ?>
 
-%%[FOR @Variable = <start expression> TO|DOWNTO <end expression> DO ]%%
+%%[FOR @Variable = LookupRows("Vacation_Deals","CustomerID","123") ]%%
         [wrapped script or email content]
     %%[NEXT @Variable]%%
 
+%%[
+Var @rows, @link, @cntr, @type
+Set @rows=LookupRows("Vacation_Deals","CustomerID","123")
+For @cntr=1 to Rowcount(@rows) do
+        set @type=Field(Row(@rows, @cntr),"type")
+        set @link=Field(Row(@rows, @cntr),"link")
+]%%
 
 %%=LOWERCASE(Name)=%%
 %%=UPSERTDE("ent.CustomObject4",2,"Region","None","Product",_SubscriberKey,"Available",0,
